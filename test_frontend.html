@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket Test</title>
+</head>
+<body>
+    <script>
+        var ws = new WebSocket("ws://localhost:8765");
+
+        ws.onmessage = function(event) {
+            var data = JSON.parse(event.data);
+            console.log("Received data:", data);
+        };
+    </script>
+</body>
+</html>
